@@ -1,0 +1,15 @@
+/***** @arguments变量 *****/
+
+/*@arguments包含了所有传递进来的参数，这样就不用单独处理每一个参数的话*/
+.box-shadow (@x:0,@y:0,@blur:1px,@color:#000){
+	box-shadow: @arguments;
+	-moz-box-shadow: @arguments;
+	-webkit-box-shadow: @arguments;
+}
+
+.box {
+	.box-shadow(2px 5px);
+	height: 100px;
+	width: 100px;
+	background: #eee;
+}

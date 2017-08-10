@@ -1,0 +1,14 @@
+/*混合（样式内嵌）*/
+@colors: #333;
+@height: 100px;
+.div1 {
+	height: @height;
+	color: @colors;
+	font-weight: bold;
+	background-color: #ccc;
+}
+.div2 {
+	border: 1px solid #222;
+	margin-top: 10px;
+	.div1
+}

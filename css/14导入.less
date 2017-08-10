@@ -1,0 +1,12 @@
+Importing(导入)
+
+你可以在main文件中通过下面的形势引入 .less 文件, .less 后缀可带可不带:
+
+@import "lib.less";
+@import "lib";
+
+如果你想导入一个CSS文件而且不想LESS对它进行处理，只需要使用.css后缀就可以:
+
+@import "lib.css";
+
+这样LESS就会跳过它不去处理它.

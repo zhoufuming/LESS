@@ -1,0 +1,33 @@
+LESS 提供了一系列的颜色运算函数. 颜色会先被转化成 HSL 色彩空间, 然后在通道级别操作:
+
+lighten(@color,10%);	// 颜色减轻10%
+darken(@color,10%);		// 变暗
+
+saturate(@color,10%);	// 饱和度高10%
+desaturate(@color,10%);	// 饱和度低10%
+
+fadein(@color,10%);		//	透明度低10%
+fadeout(@color,10%);	//	透明度高10%
+fade(@color,50%);		//	返回透明度为50%的该颜色
+
+span(@color,10);		//	颜色大十度
+span(@color,-10);		// 	颜色小十度
+
+mix(@color1,@color2);	// 两个颜色的混合
+
+使用起来相当简单：
+@base: #f04615;
+
+.class {
+	color: staturate(@base,5%);
+	background-color: lighten(spin(@base,8),25%);
+}
+
+你还可以提取颜色信息：
+hue(@color);		// 返回颜色的色调
+saturation(@color);	// 返回颜色的饱和度
+lightness(@color);	// 返回颜色的明暗度
+
+如果你想在一种颜色的通道上创建另一种颜色，这些函数就显得那么的好用，例如:
+@new: hsl(hue(@old),45%,90%);
+@new 将会保持@old的色调，但是具有不同的饱和度和亮度。

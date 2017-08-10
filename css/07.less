@@ -1,0 +1,25 @@
+/***** 嵌套规则 *****/
+/*LESS 可以让我们以嵌套的方式编写层叠样式*/
+/*#wrap {
+	border: 1px solid pink;
+
+	.text {
+		font-size: 20px;
+	}
+	.link {
+		font-size: 16px;
+		&:hover { background-color:red; }
+	}
+}*/
+/*也可以简写成：*/
+
+#wrap 			{ border: 1px solid pink; 
+	.text 		{ font-size: 20px; }
+	.link		{ font-size: 16px;
+		&:hover { background-color:red; }
+	}
+}
+
+/*代码更简洁了，而且感觉跟DOM结构格式有点像.
+注意 & 符号的使用—如果你想写串联选择器，而不是写后代选择器，就可以用到&了. 
+这点对伪类尤其有用如 :hover 和 :focus.*/

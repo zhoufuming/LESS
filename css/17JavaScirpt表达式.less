@@ -1,0 +1,25 @@
+JavaScript 表达式也可以在.less 文件中使用. 可以通过反引号(``)的方式使用:
+
+@var: `"hello".toUpperCase() + '!'`;
+
+输出:
+
+@var: "HELLO!";
+
+注意你也可以同时使用字符串插值和避免编译:
+
+@str: "hello";
+@var: ~`"@{str}".toUpperCase() + '!'`;
+
+输出:
+
+@var: HELLO!;
+
+它也可以访问JavaScript环境:
+
+@height: `document.body.clientHeight`;
+
+如果你想将一个JavaScript字符串解析成16进制的颜色值, 你可以使用 color 函数:
+
+@color: color(`window.colors.baseColor`);
+@darkcolor: darken(@color, 10%);

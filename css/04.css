@@ -1,0 +1,10 @@
+/***** @arguments变量 *****/
+/*@arguments包含了所有传递进来的参数，这样就不用单独处理每一个参数的话*/
+.box {
+  box-shadow: 2px 5px 0 1px #000;
+  -moz-box-shadow: 2px 5px 0 1px #000;
+  -webkit-box-shadow: 2px 5px 0 1px #000;
+  height: 100px;
+  width: 100px;
+  background: #eee;
+}

@@ -1,0 +1,23 @@
+任何数字、颜色或者变量都可以参与运算. 来看一组例子:
+
+@base: 5%;
+@filler: @base * 2;
+@other: @base + @filler;
+
+color: #888 / 4;
+background-color: @base-color + #111;
+height: 100% / 2 + @filler;
+
+LESS 的运算已经超出了我们的期望，它能够分辨出颜色和单位。如果像下面这样单位运算的话:
+
+@var: 1px + 5;
+
+LESS 会输出 6px.
+
+括号也同样允许使用:
+
+width: (@var + 5) * 2;
+
+并且可以在复合属性中进行运算:
+
+border: (@width * 2) solid black;

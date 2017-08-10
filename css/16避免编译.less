@@ -1,0 +1,15 @@
+有时候我们需要输出一些不正确的CSS语法或者使用一些 LESS不认识的专有语法.
+
+要输出这样的值我们可以在字符串前加上一个 ~, 例如:
+
+
+.class {
+  filter: ~"ms:alwaysHasItsOwnSyntax.For.Stuff()";
+}
+
+我们可以将要避免编译的值用 “”包含起来，输出结果为:
+
+
+.class {
+  filter: ms:alwaysHasItsOwnSyntax.For.Stuff();
+}

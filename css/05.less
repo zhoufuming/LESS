@@ -1,0 +1,28 @@
+/***** 模式匹配 *****/
+
+// 有些情况下，我们想要根据传入的参数改变混合的默认呈现
+// .mixin根据不同的@switch值执行不同的方法而表现各异，如下：
+.mixin (dark,@color) {
+	color: darken(@color,10%);
+}
+.mixin (light,@color) {
+	color: lighten(@color,10%);
+}
+.mixin (@_,@color) {
+	display: block;
+}
+
+// 赋值
+@switch: light;
+.link {
+	.mixin(@switch,#888888);
+}
+
+// 结果执行第二条的.mixin color:lighten(#888888,10%) -> color:#a2a2a2，和 display: block;
+//如上，.mixin就会得到传入颜色的浅色。如果@switch设为dark，就会得到深色。
+
+//第一个混合定义并未被匹配，因为它只接受dark做为首参
+//第二个混合定义被成功匹配，因为它只接受light
+//第三个混合定义被成功匹配，因为它接受任意值
+
+//只有被匹配的混合才会被使用。变量可以匹配任意的传入值，而变量以外的固定值就仅仅匹配与其相等的传入值。

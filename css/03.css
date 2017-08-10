@@ -1,0 +1,18 @@
+/***** 带参数混合 *****/
+/*然后在其他class中可以这样来调用它*/
+.btn1 {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+.btn2 {
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+/*我们还可一设置参数的默认值*/
+.btn3 {
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+}

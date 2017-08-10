@@ -1,0 +1,15 @@
+/*混合（样式内嵌）*/
+.div1 {
+  height: 100px;
+  color: #333;
+  font-weight: bold;
+  background-color: #ccc;
+}
+.div2 {
+  border: 1px solid #222;
+  margin-top: 10px;
+  height: 100px;
+  color: #333;
+  font-weight: bold;
+  background-color: #ccc;
+}
